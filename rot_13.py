@@ -50,13 +50,11 @@ def derotate(character):
 while True:
     message = input("Enter your message: ")
     option = input("\nEncrypt [E] / Decrypt [D]: ")
-    unique_characters = []
 
     if(option == "E"):
         encrypted_message = ""
         for character in message:
-            if character in alphabet_list and character not in unique_characters:
-                unique_characters.append(character)
+            if character in alphabet_list:
                 encrypted_message += rotate(character)
             else:
                 encrypted_message += character
@@ -65,8 +63,7 @@ while True:
     else:
         decrypted_message = ""
         for character in message:
-            if character in alphabet_list and character not in unique_characters:
-                unique_characters.append(character)
+            if character in alphabet_list:
                 decrypted_message += derotate(character)
             else:
                 decrypted_message += character
