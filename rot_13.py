@@ -1,3 +1,7 @@
+# Create lists of ASCII codes for lowercase and uppercase alphabets
+list_num_1 = [num for num in range(97,123)] 
+list_num_2 = [num for num in range(65,91)]
+
 # Create dictionaries to map ASCII codes to corresponding lowercase and uppercase alphabets
 lower_alphabet = dict(zip(list_num_1, list_alphabet_lower))
 upper_alphabet = dict(zip(list_num_2, list_alphabet_upper))
